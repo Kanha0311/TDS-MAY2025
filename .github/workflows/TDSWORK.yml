@@ -1,6 +1,16 @@
-name:TDSWORK
+name: Email Step Demo
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
 jobs:
   test:
+    runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
       - name: 23f3003124@ds.study.iitm.ac.in
-        run: echo "Hello, world!"
+        run: echo "Hello, world! This step is named after my email."
